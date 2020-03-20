@@ -62,7 +62,7 @@ prj_pack[:odr_issues].each do |issue_pack|
 #  issue_class = issue_pack[:worked] ? "#cfc" : "#fff"
   issue_css_classes = issue_pack[:css_classes]
   issue = Issue.find_by_id(issue_id)
-  issue_html = wk_pretty_issue_name issue, issue_id
+  issue_html = wk_pretty_issue_name_mod issue, issue_id
 
   if issue_pack[:each_entries].length==0 then
 %>
