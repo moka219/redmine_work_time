@@ -24,4 +24,14 @@ module WorkTimeHelper
       issue.to_s
     end
   end
+
+  def wk_pretty_issue_name_mod(issue, issue_id = issue.id)
+    if issue.nil? || !issue.visible?
+      content_tag :del, "(#" + issue.id.to_s + ")"
+    elsif issue.closed?
+      content_tag :del, issue.subject + " (#" + issue.id.to_s + ")" 
+    else
+      issue.subject + " (#" + issue.id.to_s + ")"
+    end
+  end
 end
