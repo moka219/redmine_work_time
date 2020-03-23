@@ -2,11 +2,10 @@ require 'redmine'
 
 Redmine::Plugin.register :redmine_work_time do
   name 'Redmine Work Time plugin'
-  author 'Tomohisa Kusukawa'
-  description 'A plugin to view and update TimeEntry by each user'
-  version '0.4.0'
-  url 'http://www.redmine.org/plugins/redmine_work_time'
-  author_url 'http://about.me/tkusukawa'
+  author 'Tomohisa Kusukawa (modified by Takuya Komooka)'
+  description 'A plugin to view and update TimeEntry by each user. Original_url=http://www.redmine.org/plugins/redmine_work_time Original_author_url=http://about.me/tkusukawa'
+  version '0.4.0-mod1'
+  url 'https://github.com/moka219/redmine_work_time'
   
   project_module :work_time do
     permission :view_work_time_tab, {:work_time =>
