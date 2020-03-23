@@ -1,18 +1,16 @@
-WorkTime is a Redmine plugin to edit spent time by each user.
+Modified version of redmine WorkTime plugin
+---
 
-### Installation notes ###
+Original version is https://github.com/tkusukawa/redmine_work_time
 
-0. Setup Redmine
-1. Download redmine_work_time-*.zip from https://github.com/tkusukawa/redmine_work_time/releases
-2. Expand the plugin into the plugins directory
-3. Migrate plugin:  
-  $ RAILS_ENV=production bundle exec rake redmine:plugins:migrate
-4. Restart Redmine
-5. Enable the module on the project setting page.
-6. Check the permissions on the Roles and permissions(Administration)
+* **このフォークについて**  
+Redmine Work Time pluginをヘイシャで要望があった仕様にカスタマイズしたバージョンです。
+  * version 0.4.0-mod1
+    * 工数ページのチケット名表示フォーマットを変更。`<Tacker> #<Id>: <Subject> → <Subject> (#<id>)`
+    * 月テーブルのフォントサイズ変更。 `0.8em → 1.0em`
+    * 年またぎ対応。 (cherry picked from commit [c500b08](https://github.com/nagomikaze/redmine_work_time/commit/c500b081987da3aa4abaa4a2badcb99b468aa1d1))
 
-### Links ###
-
-* http://www.redmine.org/plugins/redmine_work_time
-* https://github.com/tkusukawa/redmine_work_time
-* http://www.r-labs.org/projects/worktime/
+* **インストール**  
+releaseは用意していないので、Download ZIPでダウンロードするか、git cloneしてください。  
+pluginsディレクトリにコピーする際に、フォルダ名を「redmine_work_time」となるようにしてください。  
+他はオリジナルバージョンと同様です。  
